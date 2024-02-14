@@ -189,10 +189,11 @@ export default function Home() {
 
 
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 80001) {
+      window.alert("Change the network to Polygon");
+      throw new Error("Change network to Polygon");
     }
+
 
     if (needSigner) {
       const signer = web3Provider.getSigner();
@@ -236,7 +237,7 @@ export default function Home() {
             {}
             {utils.formatEther(cdBalance)} FieryLambo Tokens
             <br />
-            {utils.formatEther(ethBalance)} Ether
+            {utils.formatEther(ethBalance)} Matic
             <br />
             {utils.formatEther(lpBalance)} FieryLambo LP tokens
           </div>
@@ -246,7 +247,7 @@ export default function Home() {
               <div>
                 <input
                   type="number"
-                  placeholder="Amount of Ether"
+                  placeholder="Amount of Matic"
                   onChange={(e) => setAddEther(e.target.value || "0")}
                   className={styles.input}
                 />
@@ -268,7 +269,7 @@ export default function Home() {
               <div>
                 <input
                   type="number"
-                  placeholder="Amount of Ether"
+                  placeholder="Amount of Matic"
                   onChange={async (e) => {
                     setAddEther(e.target.value || "0");
                     const _addCDTokens = await calculateCD(
@@ -336,7 +337,7 @@ export default function Home() {
               setSwapAmount("");
             }}
           >
-            <option value="eth">Ethereum</option>
+            <option value="eth">Matic</option>
             <option value="cryptoDevToken">FieryLambo Token</option>
           </select>
           <br />
@@ -369,7 +370,7 @@ export default function Home() {
         <div>
           <h1 className={styles.title}>Welcome to FieryLambo Exchange!</h1>
           <div className={styles.description}>
-            Exchange Ethereum &#60;&#62; FieryLambo Tokens
+            Exchange Matic &#60;&#62; FieryLambo Tokens
           </div>
           <div>
             <button
