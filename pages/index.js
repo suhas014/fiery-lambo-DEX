@@ -346,7 +346,7 @@ export default function Home() {
             {ethSelected
               ? `You will get ${utils.formatEther(
                   tokenToBeReceivedAfterSwap
-                )} Crypto Dev Tokens`
+                )} FieryLambo Tokens`
               : `You will get ${utils.formatEther(
                   tokenToBeReceivedAfterSwap
                 )} Matic`}
