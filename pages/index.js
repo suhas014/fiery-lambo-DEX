@@ -304,7 +304,7 @@ export default function Home() {
               <div className={styles.inputDiv}>
                 {}
                 {`You will get ${utils.formatEther(removeCD)} FieryLambo
-               and ${utils.formatEther(removeEther)} Eth`}
+               and ${utils.formatEther(removeEther)} Matic`}
               </div>
               <button className={styles.button1} onClick={_removeLiquidity}>
                 Remove
@@ -349,7 +349,7 @@ export default function Home() {
                 )} Crypto Dev Tokens`
               : `You will get ${utils.formatEther(
                   tokenToBeReceivedAfterSwap
-                )} Eth`}
+                )} Matic`}
           </div>
           <button className={styles.button1} onClick={_swapTokens}>
             Swap
